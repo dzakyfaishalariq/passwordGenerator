@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppGeneratorPass</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Roboto+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/index.css" />
+  </head>
+  <body>
+    <!-- todo Navbar -->
+    <div id="navbar"></div>
+    <!-- todo navbar -->
+    <!-- todo isi -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mt-2">
+            <div class="card-header">
+              <div class="card-title text-center">
+                <h6 class="RobotoMono"><strong>Buat Password</strong></h6>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="mb-2">
+                <label for="p_password" class="form-label"
+                  >Panjang Password</label
+                >
+                <input
+                  type="range"
+                  class="form-range"
+                  min="8"
+                  max="90"
+                  id="p_password"
+                />
+              </div>
+              <div class="mt-1 Inconsolata">
+                <div class="badge text-bg-info">
+                  <div id="hasil" class="Inconsolata">0</div>
+                </div>
+                Panjang Tulisan Password
+              </div>
+              <div class="mb-2 mt-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="angka"
+                    id="persyaratan1"
+                    name="persyaratan"
+                  />
+                  <label class="form-check-label Inconsolata" for="persyaratan">
+                    Menggunakan Kombinasi Angka
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="huruf_b"
+                    id="persyaratan2"
+                    name="persyaratan"
+                  />
+                  <label class="form-check-label Inconsolata" for="persyaratan">
+                    Menggunakan Kombinasi Huruf Besar
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="huruf_k"
+                    id="persyaratan3"
+                    name="persyaratan"
+                  />
+                  <label class="form-check-label Inconsolata" for="persyaratan">
+                    Menggunakan Kombinasi Huruf Kecil
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="simbol"
+                    id="persyaratan4"
+                    name="persyaratan"
+                  />
+                  <label class="form-check-label Inconsolata" for="persyaratan">
+                    Menggunakan Kombinasi Simbol
+                  </label>
+                </div>
+              </div>
+              <hr />
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" id="generet_kode">Klik</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card mt-2">
+            <!-- ?card header -->
+            <div class="card-header">
+              <div class="card-title">
+                <h6 class="text-center RobotoMono">
+                  <strong>Hasil Password yang Dibuat</strong>
+                </h6>
+              </div>
+            </div>
+            <!-- ?end card hedar -->
+            <!-- ?card body -->
+            <div class="card-body">
+              <div class="m-3 p-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-center">
+                      <h5 class="Inconsolata" id="hasil_generator">....</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ? end card body -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- todo end isi -->
+    <script src="./src/js/main.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
